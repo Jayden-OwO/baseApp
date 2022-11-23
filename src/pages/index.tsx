@@ -12,7 +12,6 @@ const TestPage = inject('store')(
       store: { WebHome },
     } = props;
     const { testParams } = WebHome;
-    // console.log(testParams);
 
     useEffect(() => {
       getExampleInfo().then((item: any) => {

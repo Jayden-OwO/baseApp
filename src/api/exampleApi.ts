@@ -5,11 +5,11 @@ import utRequest from '../request/instance';
  * @param {{ matchId: string }}
  * @returns {any}
  */
-export const getExampleInfo = async ({ matchId } = {}) => {
+export const getExampleInfo = async ({ id } = {}) => {
   try {
-    return await utRequest.post('/exampleApi', { matchId });
+    return await utRequest.post('/exampleApi', { id });
   } catch (e) {
-    console.log('getMatchHeader error:', e);
+    console.log('getExampleInfo error:', e);
     return null;
   }
 };
