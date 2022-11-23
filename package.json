@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "react-dom": "17.x",
+    "umi": "^3.5.35",
+    "ahooks": "^3.7.1",
+    "axios": "^0.27.2",
+    "i18next": "^21.9.1",
+    "lodash": "4.17.21",
+    "mobx": "^6.6.0",
+    "mobx-react": "^7.5.0",
+    "moment": "^2.29.4",
+    "react": "17.x",
+    "react-i18next": "^11.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.35",
+    "yorkie": "^2.0.0",
+    "@types/lodash": "4.14.184",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@umijs/fabric": "^3.0.0",
+    "axios-mock-adapter": "^1.21.2",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.1.2"
+  }
+}
