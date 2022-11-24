@@ -2,7 +2,7 @@ import '../mock/exampleMock';
 import utRequest from '../request/instance';
 
 /**
- * @param {{ matchId: string }}
+ * @param {{ id: string }}
  * @returns {any}
  */
 export const getExampleInfo = async ({ id } = {}) => {
